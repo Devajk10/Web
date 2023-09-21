@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>2 year</title>
+    <link rel="stylesheet" href="style.css" />
     <style>
         body{
             background-color: black;
@@ -10,54 +11,78 @@
           margin-left: 10px;
           color: rgb(212, 0, 255);
         }
-        .set-but button {
+        .set-but1 button {
                padding: 5px;
                width: 100px;
                background-color: rgb(212, 0, 255);
                border: none;
                border-radius: 20px;
                margin-left: 30px;
+               transition: all 0.2s;
+               box-shadow: 0px 0px 8px rgb(212, 0, 255) ;
         }
-        .set-but button:hover{
+        .set-but1 button:hover{
             opacity: 50%;
             background-color: rgb(0, 217, 255);
+            box-shadow: 0px 0px 20px 3px rgb(0, 217, 255) ;
+            cursor: pointer;
         }
         .end a{
-            color: white;
+            color: rgb(255, 0, 204);
         }
         .r p{
-          height: 30px;
+          height: 50px;
           position: absolute;
           margin-top: 20px;
-          margin-right: 49%;
-          margin-left: 51%;
+          margin-right: 48.1%;
+          margin-left: 50.9%;
          }
-         .r p:hover{
+         .end p:hover{
               opacity: 70%;
               cursor: pointer;
                       }
         .l p{
           position: absolute;
-          height: 30px;
+          height: 50px;
           margin-top:20px ;
-          margin-right: 51%;
-          margin-left: 49%;
+          margin-right: 50.9%;
+          margin-left: 48.1%;
          }
-         .l p:hover{
-              opacity: 70%;
-              cursor: pointer;
-                      }
+         .lab_m button{
+            margin-top: 3%;
+            margin-left: 5%;
+            width: 100px;
+            border: none;
+            padding: 4.9px;
+            background-color:  rgb(212, 0, 255) ;
+            box-shadow: 0px 0px 8px  rgb(212, 0, 255);
+            transition: all 0.3s;
+            border-radius: 20px;
+         }
+         .lab_m button:hover{
+            opacity: 50%;
+            cursor: pointer;
+            background-color:  rgb(0, 217, 255) ;
+            box-shadow: 0px 0px 20px 3px rgb(0, 217, 255);
+         }
+        
     </style>
 </head>
 <body>
     <h2 class='head1'>JAVA PDF'S</h2>
-    <div class="set-but">
-        <a  href="java_unit1.pdf"><button>UNIT-1</button></a>
-        <a  href="java_unit2.pdf"><button>UNIT-2</button></a>
+    <div class="set-but1">
+        <a  href="java_unit1.pdf" download="java_unit1"><button>UNIT-1</button></a>
+        <a  href="java_unit2.pdf" download="java_unit2"><button>UNIT-2</button></a>
+    </div>
+    <a class="lab_m" href="JAVA_lab.pdf" download="JAVA_lab"><button >LAB-M</button></a>
+    <h2 class = 'head1'>DBMS</h2>
+    <div class="set-but1">
+        <a  href="DBMS Ex-1.pdf" download="DBMS EX-1.pdf"><button>Ex-1</button></a>
+        <a  href="DBMS Ex-2.pdf" download="DBMS EX-2.pdf"><button>EX-2</button></a>
     </div>
     <div class="end">
-        <a class="r" href="page1.html"><p>►</p></a>
-        <a class="l" href="index.html"><p>◄</p></a>
+        <a class="r" href="page1.html" hidden><p>►</p></a>
+        <a class="l" href="index.html" ><p>◄</p></a>
     </div>
 </body>
 </html>

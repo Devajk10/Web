@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>R Program</title>
+        <style>
+            body{
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+       <p class="lab1">
+            #Vector<br />
+            #1<br />
+            apple = c('red','green','yellow')<br />
+            print(apple)<br />
+            #2<br />
+            print(class(apple))<br />
+            #3<br />
+            x = c(1,2,3,4)<br />
+            print(x)<br />
+            #4<br />
+            y = seq(1,10,2)<br />
+            print(y) <br />
+            
+            #List<br />
+            simpleList = list(c(1,2,3),21.3,sin)<br />
+            print(simple1List)<br />
+            
+            #Matrices<br />
+            Matrix = matrix(c('a','a','b','c','d'),nrow=2,ncol=3,byrow=TRUE)<br />
+            print(Matrix)<br />
+            
+            #Arrays<br />
+            Array = array(c('green','yellow'),dim=c(3,3,2))<br />
+            print(Array)<br />
+            
+            #Factors<br />
+            apple_color=c('green','green','yellow','red','red','green')<br />
+            FactorTest = factor(apple_color)<br />
+            print(FactorTest)<br />
+            print(nlevels(FactorTest))<br />
+            
+            #Data Frame<br />
+            BMI = data.frame(gender=c('Male','Male','Female'),height=c(152,171.5,165),weight=c(81,93,78),age=c(42,38,26))<br />
+            print(BMI)<br />
+            #+,-,*,/<br/>
+            v = c(2,5.5,6)<br />
+            t = c(8,3,4)<br />
+            print(v+t)<br />
+            print(v-t)<br />
+            print(v*t)<br />
+            print (v/t)<br />
+            print (v%%t)<br />
+            print (v%/%t)<br />
+            print (v^t)<br />
+            #Relational operators<br />
+            v = c(2,5.5,6,9)<br />
+            t = c(8,2.5,14,9)<br />
+            print(v>t)<br />
+            print(v<t)<br />
+            print(v==t)<br />
+            print(v<=t)<br />
+            print(v>=t)<br />
+            print(v!=t)<br />
+            
+            #logical  opeartors <br />
+            v = c(3,1,TRUE,2+3i)<br />
+            t = c(4,1,FALSE,2+3i)<br />
+            print(v&t)<br />
+            v = c(3,0,TRUE,2+2i)<br />
+            t = c(4,0,FALSE,2+3i)<br />
+            print(v|t)<br />
+            
+            v = c(3,0,TRUE,2+2i)<br />
+            print(!v)<br />
+            
+            v = c(3,0,TRUE,2+2i)<br />
+            t = c(1,3,TRUE,2+3i)<br />
+            print(v&&t)<br />
+            
+            v = c(0,0,TRUE,2+3i)<br />
+            t = c(0,3,FALSE,2+3i)<br />
+            print(v||t)<br />
+            
+            #asssighnment operatrators    
+            v1 = c(3,1,TRUE,2+3i)<br />
+            v2 = c(3,1,TRUE,2+3i)<br />
+            v3=c(3,1,TRUE,2+3i)<br />
+            print(v1)<br />
+            print(v2)<br />
+            print(v3)<br />
+                        
+            c(3,1,TRUE,2+3i)->v1<br />
+            c(3,1,TRUE,2+3i)->>v2<br />
+            print(v1)<br />
+            print(v2)<br />
+            
+            #My practice session<br />
+            name = c("Amiya","raj","ashish")<br />
+            language=c("R","Python","java")<br />
+            age=c(22,25,45)<br />
+            df=data.frame(name,language,age)<br />
+            print(df)<br />
+
+            df= data.frame("name"=c("amiya","raj","ashish"),"language"=c("r","python","java"),"age"= c(22,25,45))<br />
+            print (df)<br />
+            accessing 
+            <br />
+            file = read.csv("D:/22481A0518/kuk.csv",header = T)<br />
+            file<br />
+            
+            data(mtcars)<br />
+            head(mtcars,6)<br />
+            
+            #BAAR GRAPH FOR STATES AND THEIR YIELDS<br />
+x = c("Punjab","Haryana","U.P","Gujarat","Bihar","Karnataka")<br />
+y = c(728,943,1469,2903,2153,2276)<br />
+barplot(y,name.arg=x,col="green",main="Yield of rice in Kg.per acre in various statues of India",xlab="States",ylab="Yield")<br />
+
+
+#SUB DEVIDED VERTICAL BAR GRAPH FOR COLLEGE STUDENTS AND THEIR SUBJECTS<br />
+clg = c("A","B","C","D")<br />
+clga = c(120,260,500)<br />
+clgb = c(100,180,650)<br />
+clgc = c(140,300,850)<br />
+clgd = c(750,900,300)<br />
+d = data.frame(clga,clgb,clgc,clgd)<br />
+d1 = as.matrix(d)<br />
+barplot(d1,beside = F,namew.args = clg,xlab = "College",ylab ="No.of students",col=c("Green","red","yellow"))<br />
+legend("topleft",legend=c("ARTS","SCIENCE","COMMERSE"),fill=c("green","red","yellow"),border = "black")<br />
+
+
+
+#SUB DEVIDED VERTICAL BAR GRAPH FOR COLLEGE STUDENTS AND THEIR SUBJECTS<br />
+clg = c("A","B","C","D")<br />
+clga = c(120,260,500)<br />
+clgb = c(100,180,650)<br />
+clgc = c(140,300,850)<br />
+clgd = c(750,900,300)<br />
+d = data.frame(clga,clgb,clgc,clgd)<br />
+d1 = as.matrix(d)<br />
+
+
+
+#BAR GRAAPH SUBDEVIDED HORIZONTAL<br/>
+barplot(d1,beside = F,horiz=T,namew.args = clg,xlab = "College",ylab ="No.of students",col=c("Green","red","yellow"))<br />
+legend("bottomright",inset=c(0,-0.01),legend=c("ARTS","SCIENCE","COMMERSE"),fill=c("green","red","yellow"),border = "black",cex=0.4)<br />
+
+
+
+#PIE CHART FOOD,CLOTHING....<br />
+itm = c('FOOD','CLOTHING','RECREATION','ELECTRIC','MOVIE','RENT')<br />
+exp = c(87,24,11,13,25,20)<br />
+pie(exp,main='Expenditure',labels=itm,radius=1,col=rainbow(length(exp)))<br />
+
+
+
+
+#PIE CHART IN PERCENTAGE AND LEGEND<br />
+x = c(21,62,10,53)<br />
+labels = c("London","NewYork","Singapore","Mumbai")<br />
+piepercent = round(100*x/sum(x),1)<br />
+png(file="city_percentage_lengenda.jpg")<br />
+pie(x,labels= piepercent,main="city pie chart",col = rainbow(length(x)))<br/>
+legend("topright",c("London","NewYork","Singapore","Mumbai"),cex=0.8,fill=rainbow(length(x)))<br/>
+dev.off()<br/>
+
+
+
+#HISTOGRAMS FOR UNGROUPED DATA<br/>
+x = seq(150,175,5)<br/>
+f = c(6,11,14,9,3,2)<br/>
+y = rep(x,f)<br/>
+t = seq(147.5,177.5,5)<br/>
+hist(y,breaks = t ,col = 1:6)<br/>
+
+
+
+#HISTOGRAMS FOR GROUPED DATA<br/>
+midx = seq(12.5,112.5,25)<br/>
+f = c(5,8,13,11,3)<br/>
+climit = seq(0,125,25)<br/>
+y = rep(midx,f)<br/>
+hist(y,breaks=climit,col=6:1)<br/>
+
+
+
+#MTCARS AS BOXPLOT<br/>
+input = mtcars[,c('mpg','cyl')]<br/>
+print(head(input))<br/>
+boxplot(mpg ~cyl,data=mtcars,xlab = "Number of Cylinders",ylab="Miles Per Gallon",col=c("Green","red","yellow"))<br/>
+
+
+       </p>
+    </body>
+</html>

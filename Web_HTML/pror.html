@@ -25,7 +25,7 @@
             #4<br />
             y = seq(1,10,2)<br />
             print(y) <br />
-            
+        
             #List<br />
             simpleList = list(c(1,2,3),21.3,sin)<br />
             print(simple1List)<br />
@@ -193,7 +193,137 @@ hist(y,breaks=climit,col=6:1)<br/>
 input = mtcars[,c('mpg','cyl')]<br/>
 print(head(input))<br/>
 boxplot(mpg ~cyl,data=mtcars,xlab = "Number of Cylinders",ylab="Miles Per Gallon",col=c("Green","red","yellow"))<br/>
+ 
 
+rainfall =c(10,10,10,10,10,560,640,520,320,90,20,10)<br/>
+
+mean(rainfall)<br/>
+
+
+rainfall =c(10,10,10,10,10,560,640,520,320,90,20,10)<br/>
+
+geometric.mean(rainfall)<br/>
+
+
+rainfall =c(10,10,10,10,10,560,640,520,320,90,20,10)<br/>
+
+harmonic.mean(rainfall)<br/>
+
+
+rainfall =c(10,10,10,10,10,560,640,520,320,90,20,10)<br/>
+
+median(rainfall)<br/>
+
+
+rainfall =c(c(10,10,10,10,10,560,640,520,320,90,20,10))<br/>
+            
+            mode<-function (x)<br/>
+              
+            {<br/>
+              
+              uniqx<-unique (x)<br/>
+              
+              uniqx[which.max(tabulate(match(x,uniqx)))]<br/>
+              
+            }<br/>
+            
+            mode(rainfall)<br/>
+            <br/>
+              # OR<br/>
+            <br/>
+#install. packages("modest")<br/>
+#library(modeest)<br/>
+            
+rainfall =c(10,10,10,10,10,560,640,520,320,90,20,10)<br/>
+                        
+mode =mfv(rainfall )<br/>
+                        
+if(length(rainfall)==length(unique (rainfall)))print("Mode does not exist")else mode<br/>
+                        
+rainfall =c(10,10,10,10,10,560,640,520,320,90,20,10)<br/>
+quantile(rainfall,0.25)<br/>
+                                    
+rainfall =c(10,10,10,10,10,560,640,520,320,90,20,10)<br/>
+quantile(rainfall,0.50)<br/>
+
+#mean         <br/>                                       
+x=c(NA,8,6,5.5,7,4.5,NA)        <br/>                                        
+mean(x,na.rm=TRUE)<br/>
+
+#harmonic<br/>
+x=c(NA,8,6,5.5,7,4.5,NA)<br/>
+harmonic.mean(x,na.rm=TRUE)<br/>
+
+#geometric <br/>
+x=c(NA,8,6,5.5,7,4.5,NA)<br/>
+geometric.mean(x,na.rm=TRUE)<br/>
+
+#median<br/>
+x=c(NA,8,6,5.5,7,4.5,NA)<br/>
+median(x,na.rm=TRUE)<br/>
+
+#mode<br/>
+library(modeest)<br/>
+x=c(NA,8,6,5.5,7,4.5,NA)<br/>
+y=na.omit(x)<br/>
+mode=mfv(y)<br/>
+if(length(y)==length(unique(y))) print("mode does not exist")else mode<br/>
+
+#quartile<br/>
+x=c(NA,8,6,5.5,7,4.5,NA)<br/>
+y=na.omit(x)<br/>
+quantile(y,0.75)<br/>
+
+#quartile<br/>
+x=c(NA,8,6,5.5,7,4.5,NA)<br/>
+y=na.omit(x)<br/>
+quantile(y,0.10)<br/>
+
+#Mean<br/>
+x = c(0,1,2,3,4,5,6)<br/>
+f = c(3,5,4,6,4,5,3)<br/>
+y = rep(x,f)<br/>
+mean(y)<br/>
+<br/>
+#G.M<br/>
+x = c(0,1,2,3,4,5,6)<br/>
+f = c(3,5,4,6,4,5,3)<br/>
+y = rep(x,f)<br/>
+geometric.mean(y)<br/>
+
+#H.M<br/>
+x = c(0,1,2,3,4,5,6)<br/>
+f = c(3,5,4,6,4,5,3)<br/>
+y = rep(x,f)<br/>
+harmonic.mean(y)<br/>
+
+#Median<br/>
+x = c(0,1,2,3,4,5,6)<br/>
+f = c(3,5,4,6,4,5,3)<br/>
+y = rep(x,f)<br/>
+median(y)<br/>
+
+#Mode<br/>
+x = c(0,1,2,3,4,5,6)<br/>
+f = c(3,5,4,6,4,5,3)<br/>
+
+y = rep(x,f)<br/>
+mode = mfv(y)<br/>
+
+if(length(y)==length(unique(y)))<br/>
+       print("Mode does not exist") else mode<br/>
+
+#1st quartile<br/>
+x = c(0,1,2,3,4,5,6)<br/>
+f = c(3,5,4,6,4,5,3)<br/>
+y = rep(x,f)<br/>
+quantile(y,0.25)<br/>
+
+#21% quartile<br/>
+x = c(0,1,2,3,4,5,6)<br/>
+f = c(3,5,4,6,4,5,3)<br/>
+y = rep(x,f)<br/>
+quantile(y,0.21)<br/>
 
        </p>
     </body>
